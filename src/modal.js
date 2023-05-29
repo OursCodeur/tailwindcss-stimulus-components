@@ -82,6 +82,13 @@ export default class extends Controller {
     }
   }
 
+  submitWithKeyboard(e) {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      this.containerTarget.querySelector('form').submit();
+    }
+  }
+
   close(e) {
     if (e && this.preventDefaultActionClosing) {
       e.preventDefault();
